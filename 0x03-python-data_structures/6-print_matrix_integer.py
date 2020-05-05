@@ -10,5 +10,4 @@ def print_matrix_integer(matrix=[[]]):
                 if i < len(x):
                     print("{:d}".format(y), end=" ")
                 else:
-                    print("{:d}".format(y), end='')
-            print()
+                    print("{:d}".format(y))
