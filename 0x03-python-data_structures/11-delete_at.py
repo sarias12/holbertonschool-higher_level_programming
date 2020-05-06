@@ -2,5 +2,5 @@
 def delete_at(my_list=[], idx=0):
     if len(my_list) <= idx:
         return my_list
-    my_list = my_list[:idx] + my_list[idx + 1:]
+    my_list.remove(my_list[idx])
     return my_list
