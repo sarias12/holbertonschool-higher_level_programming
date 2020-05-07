@@ -1,4 +1,4 @@
 def print_sorted_dictionary(a_dictionary):
-    sorted_dict = sorted(a_dictionary.items())
-    for key, value in sorted_dict:
+    sorted_dictionary = sorted(a_dictionary.items())
+    for key, value in sorted_dictionary:
         print("{}: {}".format(key, value))
