@@ -4,12 +4,12 @@ def safe_print_list_integers(my_list=[], x=0):
     for elements in range(0, x):
         try:
             print("{:d}".format(int(my_list[elements])), end="")
+            i += 1
         except TypeError:
             continue
         except ValueError:
             continue
         except IndexError:
-            continue
-        i += 1
+            break   
     print("")
     return i
