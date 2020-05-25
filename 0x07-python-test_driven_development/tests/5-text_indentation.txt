@@ -11,8 +11,7 @@ This is an text file in reStructuredText format.  First import
 
 now using these cases:
 
->>> text_indentation("\nsteben")
-<BLANKLINE>
+>>> text_indentation("steben\n")
 steben
 
 >>> text_indentation("steben")
