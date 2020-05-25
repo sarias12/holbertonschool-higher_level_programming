@@ -1,9 +1,19 @@
 #!/usr/bin/python3
 """
-This is the module that prints My name is <first name> <last name>
+This that prints a text with 2 new lines after each
+of these characters: ., ? and :
 """
 
+
 def text_indentation(text):
+    """text_indentation [summary]
+
+    Args:
+        text (str): text for display in ouput.
+
+    Raises:
+        TypeError: when text is not a data type string.
+    """
     if type(text) != str:
         raise TypeError("text must be a string")
     i = 0
