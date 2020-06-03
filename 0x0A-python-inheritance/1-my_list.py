@@ -12,7 +12,7 @@ class MyList(list):
     """
     def print_sorted(self):
         """print_sorted
-        display sorted list.
+        display sorted list..
         """
         list_sorted = list(sorted(self))
         print(list_sorted)
