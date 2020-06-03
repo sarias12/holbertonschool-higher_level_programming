@@ -14,5 +14,5 @@ class MyList(list):
         """print_sorted
         display sorted list.
         """
-        list_sorted = sorted(self)
+        list_sorted = list(sorted(self))
         print(list_sorted)
