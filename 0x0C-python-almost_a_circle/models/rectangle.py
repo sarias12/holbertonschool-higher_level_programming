@@ -167,7 +167,7 @@ class Rectangle(Base):
         """method that assigns an argument to each attribute:
         1st argument - the id attribute
         2nd argument - the width attribute
-        3rd argument - the height attribute
+        3nd argument - the height attribute
         4th argument - the x attribute
         5th argument - the y attribute
         or that assigns a key/value argument to attributes.
@@ -177,9 +177,9 @@ class Rectangle(Base):
                 if idx == 0:
                     self.id = element
                 if idx == 1:
-                    self.height = element
-                if idx == 2:
                     self.width = element
+                if idx == 2:
+                    self.height = element
                 if idx == 3:
                     self.x = element
                 if idx == 4:
@@ -188,10 +188,10 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if key == 'id':
                     self.id = value
-                if key == 'height':
-                    self.height = value
                 if key == 'width':
                     self.width = value
+                if key == 'height':
+                    self.height = value
                 if key == 'x':
                     self.x = value
                 if key == 'y':
