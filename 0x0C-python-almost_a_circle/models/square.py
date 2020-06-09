@@ -34,55 +34,22 @@ class Square(Rectangle):
         return (out.format(self.id, self.x, self.y, self.size))
 
     @property
-    def width(self):
-        """getter method for width
+    def size(self):
+        """getter method for size
 
         Returns:
-            [int]: [width attribute]
+            [int]: [size attribute]
         """
         return self.__width
 
-    @property
-    def height(self):
-        """getter method for height
-
-        Returns:
-            [int]: [height attribute]
-        """
-        return self.__height
-
-    @width.setter
-    def width(self, size):
-        """setter method for width [summary]
+    @size.setter
+    def size(self, size):
+        """setter method for size [summary]
 
         Args:
-            width (int): square's width.
-
-        Raises:
-            TypeError: When the input(width) is not an integer.
-            ValueError: When width is under or equals 0.
+            size (int): square's size.
         """
-        if type(size) is not int:
-            raise TypeError("width must be an integer")
-        if size <= 0:
-            raise ValueError("width must be > 0")
         self.__width = size
-
-    @height.setter
-    def height(self, size):
-        """setter method for height [summary]
-
-        Args:
-            height (int): square's height.
-
-        Raises:
-            TypeError: When the input(height) is not an integer.
-            ValueError: When height is under or equals 0.
-        """
-        if type(size) is not int:
-            raise TypeError("height must be an integer")
-        if size <= 0:
-            raise ValueError("height must be > 0")
         self.__height = size
 
     def update(self, *args, **kwargs):
