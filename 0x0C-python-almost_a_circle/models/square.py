@@ -40,7 +40,7 @@ class Square(Rectangle):
         Returns:
             [int]: [size attribute]
         """
-        return self.__width
+        return self.width
 
     @size.setter
     def size(self, size):
@@ -49,8 +49,8 @@ class Square(Rectangle):
         Args:
             size (int): square's size.
         """
-        self.__width = size
-        self.__height = size
+        self.width = size
+        self.height = size
 
     def update(self, *args, **kwargs):
         """method that assigns an argument to each attribute:
