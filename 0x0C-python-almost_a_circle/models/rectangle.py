@@ -184,19 +184,18 @@ class Rectangle(Base):
                     self.x = element
                 if idx == 4:
                     self.y = element
-        else:
-            if len(kwargs) > 0:
-                for key, value in kwargs.items():
-                    if key == 'id':
-                        self.id = value
-                    if key == 'height':
-                        self.height = value
-                    if key == 'width':
-                        self.width = value
-                    if key == 'x':
-                        self.x = value
-                    if key == 'y':
-                        self.y = value
+        if len(kwargs) > 0:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    self.id = value
+                if key == 'height':
+                    self.height = value
+                if key == 'width':
+                    self.width = value
+                if key == 'x':
+                    self.x = value
+                if key == 'y':
+                    self.y = value
 
     def to_dictionary(self):
         """to_dictionary [summary]

@@ -103,17 +103,16 @@ class Square(Rectangle):
                     self.x = element
                 if idx == 3:
                     self.y = element
-        else:
-            if len(kwargs) > 0:
-                for key, value in kwargs.items():
-                    if key == 'id':
-                        self.id = value
-                    if key == 'size':
-                        self.size = value
-                    if key == 'x':
-                        self.x = value
-                    if key == 'y':
-                        self.y = value
+        if len(kwargs) > 0:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    self.id = value
+                if key == 'size':
+                    self.size = value
+                if key == 'x':
+                    self.x = value
+                if key == 'y':
+                    self.y = value
 
     def to_dictionary(self):
         """to_dictionary [summary]
