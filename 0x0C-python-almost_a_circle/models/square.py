@@ -62,7 +62,7 @@ class Square(Rectangle):
             TypeError: When the input(width) is not an integer.
             ValueError: When width is under or equals 0.
         """
-        if type(size) != int:
+        if type(size) is not int:
             raise TypeError("width must be an integer")
         if size <= 0:
             raise ValueError("width must be > 0")
@@ -79,7 +79,7 @@ class Square(Rectangle):
             TypeError: When the input(height) is not an integer.
             ValueError: When height is under or equals 0.
         """
-        if type(size) != int:
+        if type(size) is not int:
             raise TypeError("height must be an integer")
         if size <= 0:
             raise ValueError("height must be > 0")
@@ -93,7 +93,7 @@ class Square(Rectangle):
         4th argument - the y attribute
         or that assigns a key/value argument to attributes.
         """
-        if len(args) != 0:
+        if len(args) > 0:
             for idx, element in enumerate(args, 1):
                 if idx == 1:
                     self.id = element
@@ -104,7 +104,7 @@ class Square(Rectangle):
                 if idx == 4:
                     self.y = element
         else:
-            if len(kwargs) != 0:
+            if len(kwargs) > 0:
                 for key, value in kwargs.items():
                     if key == 'id':
                         self.id = value

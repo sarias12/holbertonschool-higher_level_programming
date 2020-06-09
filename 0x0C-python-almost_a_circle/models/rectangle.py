@@ -76,7 +76,7 @@ class Rectangle(Base):
             TypeError: When the input(width) is not an integer.
             ValueError: When width is under or equals 0.
         """
-        if type(width) != int:
+        if type(width) is not int:
             raise TypeError("width must be an integer")
         if width <= 0:
             raise ValueError("width must be > 0")
@@ -93,7 +93,7 @@ class Rectangle(Base):
             TypeError: When the input(height) is not an integer.
             ValueError: When height is under or equals 0.
         """
-        if type(height) != int:
+        if type(height) is not int:
             raise TypeError("height must be an integer")
         if height <= 0:
             raise ValueError("height must be > 0")
@@ -110,7 +110,7 @@ class Rectangle(Base):
             TypeError: When the input(x) is not an integer.
             ValueError: When x is under 0.
         """
-        if type(x) != int:
+        if type(x) is not int:
             raise TypeError("x must be an integer")
         if x < 0:
             raise ValueError("x must be >= 0")
@@ -127,7 +127,7 @@ class Rectangle(Base):
             TypeError: When the input(y) is not an integer.
             ValueError: When y is under 0.
         """
-        if type(y) != int:
+        if type(y) is not int:
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
@@ -172,7 +172,7 @@ class Rectangle(Base):
         5th argument - the y attribute
         or that assigns a key/value argument to attributes.
         """
-        if len(args) != 0:
+        if len(args) > 0:
             for idx, element in enumerate(args, 1):
                 if idx == 1:
                     self.id = element
@@ -185,7 +185,7 @@ class Rectangle(Base):
                 if idx == 5:
                     self.y = element
         else:
-            if len(kwargs) != 0:
+            if len(kwargs) > 0:
                 for key, value in kwargs.items():
                     if key == 'id':
                         self.id = value
