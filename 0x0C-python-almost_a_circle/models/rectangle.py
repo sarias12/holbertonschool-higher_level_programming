@@ -173,16 +173,16 @@ class Rectangle(Base):
         or that assigns a key/value argument to attributes.
         """
         if len(args) > 0:
-            for idx, element in enumerate(args, 1):
-                if idx == 1:
+            for idx, element in enumerate(args):
+                if idx == 0:
                     self.id = element
-                if idx == 2:
+                if idx == 1:
                     self.height = element
-                if idx == 3:
+                if idx == 2:
                     self.width = element
-                if idx == 4:
+                if idx == 3:
                     self.x = element
-                if idx == 5:
+                if idx == 4:
                     self.y = element
         else:
             if len(kwargs) > 0:

@@ -94,14 +94,14 @@ class Square(Rectangle):
         or that assigns a key/value argument to attributes.
         """
         if len(args) > 0:
-            for idx, element in enumerate(args, 1):
-                if idx == 1:
+            for idx, element in enumerate(args):
+                if idx == 0:
                     self.id = element
-                if idx == 2:
+                if idx == 1:
                     self.size = element
-                if idx == 3:
+                if idx == 2:
                     self.x = element
-                if idx == 4:
+                if idx == 3:
                     self.y = element
         else:
             if len(kwargs) > 0:
