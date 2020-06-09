@@ -2,6 +2,8 @@
 """
 Rectagle Module
 """
+
+
 from models.base import Base
 
 
@@ -11,7 +13,6 @@ class Rectangle(Base):
     Args:
         Base (class): object from which it inherits Rectagle Class
     """
-
     def __init__(self, width, height, x=0, y=0, id=None):
         """__init__ [summary]
 
