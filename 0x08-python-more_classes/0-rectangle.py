@@ -3,6 +3,7 @@
 Rectangle Module
 """
 
+
 class Rectangle:
     """
     Class Rectangle empty.
