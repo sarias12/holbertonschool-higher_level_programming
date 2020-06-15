@@ -97,6 +97,8 @@ class Rectangle:
             [str]: Print the rectangle with the character #.
         """
         text = ""
+        if self.__width == 0 or self.__height == 0:
+            return text
         for i in range(self.__height):
             for j in range(self.__width):
                 text += '#'
