@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 This script ists all states from the database hbtn_0e_0_usa
+starting with N (upper N).
 """
 import MySQLdb
 from sys import argv
