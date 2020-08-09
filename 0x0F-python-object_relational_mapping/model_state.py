@@ -8,11 +8,16 @@ Base = declarative_base()
 
 
 class State(Base):
+    """Class for states table  with  id and name colum.
+
+    Args:
+        Base: [Inherits from Base]
+    """
     __tablename__ = 'states'
     id = Column(
-        'id', Integer,
+        'id', 
+        Integer,
         autoincrement=True,
-        unique=True,
         primary_key=True,
         nullable=False
         )
