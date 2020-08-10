@@ -20,11 +20,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    new_state = State(name='Louisiana')
-    session.add(new_state)
+    update = session.query(State).\
+        filter(State.id.like('2')).first()
+    update.name = 'New Mexico'
     session.commit()
-    result = session.query(State).\
-        filter(State.name.like('Louisiana')).first()
-
-    if result:
-        print("{}".format(result.id))
+    if update:
+        print("{}".format(update.id, update.name))
