@@ -22,10 +22,9 @@ if __name__ == "__main__":
     session = Session()
     new_state = State(name='Louisiana')
     session.add(new_state)
+    session.commit()
     result = session.query(State).\
         filter(State.name.like('Louisiana')).first()
 
     if result:
         print("{}".format(result.id))
-    else:
-        print("Not found")
