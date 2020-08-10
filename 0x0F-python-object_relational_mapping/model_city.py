@@ -28,4 +28,4 @@ class City(Base):
         Integer,
         ForeignKey('states.id')
     )
-    parent = relationship("State", back_populates="child")
+    states = relationship('State')
