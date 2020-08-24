@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-from urllib.request import Request, urlopen
+"""
+Python script that fetches https://intranet.hbtn.io/status
+"""
+import urllib.request
 
 if __name__ == "__main__":
 
-    req = Request('https://intranet.hbtn.io/status')
-    with urlopen(req) as response:
+    req = urllib.request.Request('https://intranet.hbtn.io/status')
+    with urllib.request.urlopen(req) as response:
         the_page = response.read()
         print("Body response:")
         print("\t- type: {}".format(type(the_page)))
