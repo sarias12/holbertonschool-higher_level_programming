@@ -7,10 +7,9 @@ import requests
 import sys
 
 
-user = sys.argv[1]
-pasw = sys.argv[2]
-
 if __name__ == "__main__":
+    user = sys.argv[1]
+    pasw = sys.argv[2]
     url = 'https://api.github.com/user'
     value = {'login': user}
     r = requests.get(url, params=value, auth=(user, pasw))
