@@ -11,8 +11,10 @@ request(url, function (error, response, body) {
     const dict = JSON.parse(body);
     let number = 0;
     for (let index = 0; index < dict.results.length; index++) {
-      if (dict.results[index].characters.includes('https://swapi-api.hbtn.io/api/people/18/')) {
-        number += 1;
+      for (let index2 = 0; index2 < dict.results[index].characters.length; index2++) {
+        if (dict.results[index].characters[index2].includes('/18/')) {
+          number += 1;
+        }
       }
     }
     console.log(number);
